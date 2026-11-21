@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CallNovaLiteInLondon",
+      "Effect": "Allow",
+      "Action": "bedrock:InvokeModel",
+      "Resource": "arn:aws:bedrock:eu-west-2::foundation-model/amazon.nova-lite-v1:0"
+    },
+    {
+      "Sid": "UseTheChatGuardrail",
+      "Effect": "Allow",
+      "Action": "bedrock:ApplyGuardrail",
+      "Resource": "arn:aws:bedrock:eu-west-2:<ACCOUNT_ID>:guardrail/<GUARDRAIL_ID>"
+    }
+  ]
+}

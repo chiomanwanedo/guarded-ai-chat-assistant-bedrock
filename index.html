@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sparrow Lane Cycles – Leeds</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #1e4d2b;
+    --green-mid: #2e6b3e;
+    --green-light: #3a8050;
+    --cream: #fdf6e3;
+    --cream-dark: #f0e6c8;
+    --text: #1a1a1a;
+    --muted: #4a4a4a;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: Georgia, serif; background: var(--cream); color: var(--text); line-height: 1.6; font-size: 1rem; }
+  a { color: var(--green-mid); }
+  a:hover { color: var(--green-light); }
+
+  /* HEADER */
+  header { background: var(--green); color: var(--cream); padding: 1.5rem 1rem 1rem; text-align: center; }
+  header h1 { font-size: clamp(1.6rem, 5vw, 2.6rem); letter-spacing: .02em; }
+  header p.tagline { font-style: italic; font-size: 1.05rem; margin: .3rem 0 1rem; opacity: .9; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem .8rem; }
+  nav a { color: var(--cream-dark); text-decoration: none; font-size: .9rem; font-family: Verdana, sans-serif; border-bottom: 1px dotted var(--cream-dark); padding-bottom: 1px; }
+  nav a:hover { color: #fff; border-color: #fff; }
+
+  /* SECTIONS */
+  section { padding: 2.5rem 1rem; max-width: 780px; margin: 0 auto; }
+  section + section { border-top: 2px solid var(--cream-dark); }
+  h2 { font-size: 1.55rem; color: var(--green); margin-bottom: 1rem; }
+  h3 { font-size: 1.1rem; color: var(--green-mid); margin: 1.2rem 0 .4rem; }
+  p { margin-bottom: .8rem; color: var(--muted); }
+
+  /* WELCOME */
+  #welcome p { font-size: 1.05rem; }
+  .cta { display: inline-block; margin-top: .8rem; background: var(--green); color: var(--cream); text-decoration: none; padding: .75rem 1.8rem; border-radius: 4px; font-family: Verdana, sans-serif; font-size: 1rem; letter-spacing: .03em; transition: background .2s; }
+  .cta:hover { background: var(--green-light); color: #fff; }
+
+  /* PRICE TABLE */
+  table { width: 100%; border-collapse: collapse; margin-top: .5rem; font-size: .95rem; }
+  thead th { background: var(--green); color: var(--cream); text-align: left; padding: .55rem .7rem; }
+  tbody tr:nth-child(odd) { background: var(--cream-dark); }
+  tbody tr:nth-child(even) { background: var(--cream); }
+  td { padding: .5rem .7rem; vertical-align: top; }
+  td:last-child { white-space: nowrap; font-weight: bold; color: var(--green); }
+
+  /* HIRE CARDS */
+  .cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+  .card { flex: 1 1 200px; background: var(--cream-dark); border-left: 4px solid var(--green); border-radius: 4px; padding: .9rem 1rem; }
+  .card strong { display: block; font-size: 1.05rem; color: var(--green); margin-bottom: .3rem; }
+  .card .price { font-size: 1.3rem; font-weight: bold; color: var(--green-mid); }
+  .card p { font-size: .88rem; margin: .3rem 0 0; }
+
+  /* HOURS TABLE */
+  .hours-table { width: 100%; border-collapse: collapse; font-size: .95rem; margin-top: .5rem; }
+  .hours-table tr:nth-child(odd) { background: var(--cream-dark); }
+  .hours-table tr:nth-child(even) { background: var(--cream); }
+  .hours-table td { padding: .45rem .7rem; }
+  .hours-table td:last-child { text-align: right; color: var(--muted); }
+  .closed { color: #b04a2e !important; font-style: italic; }
+
+  /* FIND US */
+  address { font-style: normal; line-height: 1.9; color: var(--muted); }
+  address a { display: inline-block; }
+
+  /* NOTICE */
+  .notice { background: var(--cream-dark); border-left: 4px solid var(--green-mid); padding: .6rem .9rem; border-radius: 3px; font-size: .9rem; color: var(--muted); margin-bottom: .8rem; }
+
+  /* FOOTER */
+  footer { background: var(--green); color: var(--cream-dark); text-align: center; padding: 1rem; font-size: .85rem; font-family: Verdana, sans-serif; }
+  footer a { color: var(--cream-dark); }
+
+  /* BOTTOM-RIGHT CLEAR */
+  body { padding-bottom: 80px; }
+
+  @media (max-width: 480px) {
+    td:nth-child(2) { font-size: .85rem; }
+    .card { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚲 Sparrow Lane Cycles</h1>
+  <p class="tagline">Leeds' friendly neighbourhood bike shop – repairs, services &amp; hire</p>
+  <nav>
+    <a href="#welcome">Home</a>
+    <a href="#repairs">Repairs</a>
+    <a href="#hire">Hire</a>
+    <a href="#hours">Opening Hours</a>
+    <a href="#find-us">Find Us</a>
+  </nav>
+</header>
+
+<section id="welcome">
+  <h2>Welcome to Sparrow Lane Cycles</h2>
+  <p>We're a small, independent bike shop tucked away on Sparrow Lane in Leeds. Whether your tyre's gone flat on the way to work, your gears need a proper tune-up, or you fancy exploring the city on two wheels, we're here to help – no fuss, no jargon.</p>
+  <p>Every repair comes with our <strong>30-day workmanship guarantee</strong>, and we offer <strong>free collection and delivery within 3 miles</strong> on full services. Just give us a call or drop in.</p>
+  <a class="cta" href="tel:01134960123">📞 Call to book</a>
+</section>
+
+<section id="repairs">
+  <h2>Repairs &amp; Servicing</h2>
+  <p>From a quick puncture fix to a full overhaul, our mechanics look after every type of bike.</p>
+  <div class="notice">💡 Drop off before <strong>10:00</strong> Tuesday–Friday and we can usually turn around a basic service the same day.</div>
+  <table>
+    <thead>
+      <tr><th>Service</th><th>What's included</th><th>Price</th><th>Turnaround</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Puncture repair</td>
+        <td>Inner tube patch or replacement, tyre check</td>
+        <td>£12</td>
+        <td>While you wait</td>
+      </tr>
+      <tr>
+        <td>Basic service</td>
+        <td>Brakes, gears, chain lube, tyre pressure, safety check</td>
+        <td>£45</td>
+        <td>Next working day (same day if in before 10:00)</td>
+      </tr>
+      <tr>
+        <td>Full service</td>
+        <td>Everything in basic, plus full clean, cable check, bearing inspection</td>
+        <td>£95</td>
+        <td>2–3 working days</td>
+      </tr>
+      <tr>
+        <td>E-bike safety check</td>
+        <td>Battery, motor, connectors, brakes &amp; overall safety inspection</td>
+        <td>£60</td>
+        <td>Next working day</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top:.8rem; font-size:.9rem;">Parts are charged separately where needed. We'll always quote before we proceed. All work covered by our <strong>30-day guarantee</strong>.</p>
+  <p style="font-size:.9rem;"><strong>Free collection &amp; delivery</strong> within 3 miles on full services – just ask when you book.</p>
+</section>
+
+<section id="hire">
+  <h2>Bike Hire</h2>
+  <p>Explore Leeds at your own pace. Every hire includes a <strong>helmet and lock</strong> at no extra cost.</p>
+  <div class="cards">
+    <div class="card">
+      <strong>City Bike</strong>
+      <span class="price">£25 / day</span>
+      <p>Comfortable upright riding position, ideal for city streets and canal paths.</p>
+    </div>
+    <div class="card">
+      <strong>E-Bike</strong>
+      <span class="price">£40 / day</span>
+      <p>Pedal-assist electric bike – great for longer rides or hilly routes.</p>
+    </div>
+    <div class="card">
+      <strong>E-Bike – Weekly</strong>
+      <span class="price">£180 / week</span>
+      <p>Best value for a longer stay or a week of car-free commuting.</p>
+    </div>
+  </div>
+  <h3>Hire requirements</h3>
+  <ul style="color:var(--muted); padding-left:1.3rem; font-size:.95rem; line-height:1.8;">
+    <li>Riders must be <strong>16 or over</strong></li>
+    <li>Valid <strong>photo ID</strong> required at pick-up</li>
+    <li><strong>£100 refundable deposit</strong> held until the bike is returned in good condition</li>
+  </ul>
+  <p style="margin-top:.8rem; font-size:.9rem;">To book a hire bike, call us, email, or pop in during opening hours.</p>
+</section>
+
+<section id="hours">
+  <h2>Opening Hours</h2>
+  <table class="hours-table">
+    <tr><td>Tuesday</td><td>9:00 – 18:00</td></tr>
+    <tr><td>Wednesday</td><td>9:00 – 18:00</td></tr>
+    <tr><td>Thursday</td><td>9:00 – 18:00</td></tr>
+    <tr><td>Friday</td><td>9:00 – 18:00</td></tr>
+    <tr><td>Saturday</td><td>9:00 – 17:00</td></tr>
+    <tr><td>Sunday</td><td>10:00 – 14:00</td></tr>
+    <tr><td>Monday</td><td class="closed">Closed</td></tr>
+    <tr><td>Bank Holidays</td><td class="closed">Closed</td></tr>
+  </table>
+</section>
+
+<section id="find-us">
+  <h2>Find Us &amp; Get in Touch</h2>
+  <address>
+    <strong>Sparrow Lane Cycles</strong><br>
+    14 Sparrow Lane<br>
+    Leeds<br><br>
+    📞 <a href="tel:01134960123">0113 496 0123</a><br>
+    ✉️ <a href="mailto:hello@sparrowlane.example">hello@sparrowlane.example</a>
+  </address>
+  <h3>How to book</h3>
+  <p>Give us a <strong>call</strong>, send us an <strong>email</strong>, or come and see us <strong>in the shop</strong> during opening hours. We're always happy to chat through what your bike needs.</p>
+</section>
+
+<footer>
+  <p>© 2025 Sparrow Lane Cycles · 14 Sparrow Lane, Leeds · <a href="tel:01134960123">0113 496 0123</a> · <a href="mailto:hello@sparrowlane.example">hello@sparrowlane.example</a></p>
+</footer>
+
+<script src="chat-widget.js" data-api="<YOUR_API_URL>"></script>
+</body>
+</html>
